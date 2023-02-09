@@ -1,0 +1,171 @@
+
+
+
+
+{% extends "base.html" %}
+{% load static %} 
+
+ {% block content %}
+
+
+<div class="container">
+  <ol class="breadcrumb underline"> 
+    <li><a href='/'>ГЛАВНАЯ</a></li>
+    <li><a href="{% url 'products:products' %}">Все платья</a></li>
+    <li>{{product.name}}</li>
+  </ol><!-- /.breadcrumb --> 
+</div><!-- /.container -->  
+ 
+ <div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="inner">
+					<img  src="{{product.image.url }}" class="img-responsive" alt="1" />
+					
+				</div><!-- /.inner -->
+			</div><!-- /.col-sm-4 -->
+			
+			<div class="col-sm-6">
+				<div class="rq-inner">
+						
+					<a href="#" class="font-30-for-reg-0">Название: {{product.name}}</a>
+					<h3 class="font-18-for-reg-0">Описание:  <span>{{product.description}}</span></h3>
+					<hr>
+					<a href="#" class="rating" >
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-star-o ash" aria-hidden="true"></i>
+						<span class="ash"></span>
+					</a><!-- /.rating -->
+					<h3 class="font-18-for-reg-0">Pазмер:  <span>{{product.size}}</span></h3>
+					<h3 class="font-18-for-reg-0">Длина:  <span>{{product.length}}</span></h3>
+					<h3 class="font-18-for-reg-0">Длина Рукава:   <span>{{product.length_hand}}</span></h3>
+					<h3 class="font-18-for-reg-0"> Цвет:  <span>{{product.color}}</span></h3>
+					<h3 class="font-18-for-reg-0">Категория:    <span>{{product.category}}</span></h3>
+
+					
+					
+
+				</div><!-- /.rq-inner -->
+					<div class="panel-group rq-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      <h4 class="panel-title">
+					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					          Размер и посадка
+					          <i class="fa fa-angle-up pull-right" aria-hidden="true"></i>
+					        </a>
+
+					      </h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+
+					      <div class="panel-body">
+					        Есть ателье: мастера подгонят понравившиеся платье по длине и объемам.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					          О состоянии
+					          <i class="fa fa-angle-down pull-right" aria-hidden="true"></i>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="panel-body">
+					        Прямо сейчас в салоне Velvet Dresses в наличии более 300 платьев, каждое из которых находится в идеальном состоянии – чистое, поглаженное и без постороннего запаха.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          О цене
+					          <i class="fa fa-angle-down pull-right" aria-hidden="true"></i>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					      <div class="panel-body">
+					      Вы можете приехать к нам в филиалы и посмотреть цены. Поскольку цены меняются в зависимости от использования, мы не можем сказать цену заранее.
+					      </div>
+					    </div>
+					  </div>
+					</div><!-- /.accordion -->
+
+			</div><!-- /.col-lg-6 -->
+
+
+		</div><!-- /.row
+ -->		
+	</div>	<!-- /.container -->
+
+</div><!-- /.product-details -->	
+
+<div class="product-details base-padd"> 
+		<div class="container complete-look">
+		<h4 class="font-30-for-reg-3"></h4>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="inner">
+					<img  src="{{product.image3.url }}" class="img-responsive" alt="1" />
+					
+				</div><!-- /.inner -->
+			</div><!-- /.col-sm-4 -->
+
+			<div class="col-sm-6">
+				<div class="inner">
+					<img  src="{{product.image2.url }}" class="img-responsive" alt="1" />
+					
+				</div><!-- /.inner -->
+			</div><!-- /.col-sm-4 -->
+
+			
+			
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div>
+	
+	
+
+
+<br><br>
+<div class="favorites base-padd">
+<h2>
+Может понравиться...</h2>
+	<div class="container">
+		<div class="owl-favorites owl-carousel owl-theme">
+
+{% for product in random_products %}
+	    <div class="item">
+	    	<figure> 
+	    		<img src="{{product.image_thumbnail.url}}"  alt="{{product.name}}">
+	    		<a href="{{product.get_absolute_url}}">Aрендовать</a>
+	    	</figure>
+	    	<h3 class="font-20-for-reg-0">{{product.name}}</h3>	
+	    	<p class="font-16-for-reg-0">{{product.description|slice:":50"  }} ...</p>
+	    </div>
+	    	{% endfor %}
+	 
+    </div><!-- /.owl-favorites -->
+	</div><!-- /.container -->
+</div><!-- /.favorites -->
+
+
+
+
+
+
+ {% endblock content %}
+
+
+
+
+  
+

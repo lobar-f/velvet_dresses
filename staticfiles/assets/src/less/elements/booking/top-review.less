@@ -1,0 +1,141 @@
+@import "../common/common-style.less"; 
+.top-review {
+	background: @rq-flored-white-color;
+	padding: 60px 0;
+	h4 {
+		margin-bottom: 60px;
+	}
+	.wrapper {
+		background: @rq-white-color;
+		padding: 30px;
+		position: relative;
+		margin-bottom: 30px;
+		.reviews {
+			position: relative; 
+			padding-left: 265px;
+			.customer-details {
+				position: absolute;
+				left: 0;
+				top: 0;
+				h4 {
+					margin-top: 0;
+					margin-bottom: 40px;
+				}
+				p {
+					text-transform: uppercase;
+					span {
+						color: @rq-ash-color2;
+					}
+				}
+			}
+			.photo {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			.contents {
+				padding-left: 30px;
+				margin-right: 145px;
+				a {
+					> i {
+						font-size: 16px;
+    				margin-right: 3px;
+						color: @rq-secondary-color;
+						&.ash {
+							color: @rq-ash-color5;
+						}
+					}
+				}
+				span {
+					&.font-14-for-reg-2 {
+						color: @rq-ash-color2;
+						margin-left: 20px;
+					}
+				}
+			}
+
+		}
+		&:before {
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				background: @rq-flored-white-color;
+				left: 290px;
+				top: 0;
+			}
+	}
+
+}
+nav {
+		.pagination {
+			margin: 0;
+			li {
+				a {
+					color: @rq-ash-color2;
+					font-size: 20px;
+					border: none;
+					background: none;
+				  padding: 6px 8px;
+				  &.active {
+				  	color: @rq-primary-color;
+				  }
+				}
+			}
+		}
+	}
+@media (max-width: 767px) {
+	.top-review .wrapper:before {
+		content: none;
+	}
+	.top-review .wrapper .reviews .photo {
+	  position: absolute;
+	  right: inherit;
+	  left: 72px;
+	  width: 80px;
+	  top: 0;
+	  height: 80px;
+	  border-radius: 50%;
+	  overflow: hidden;
+	}
+	.top-review .wrapper .reviews .contents {
+	  margin-right: 0;
+	}
+	.top-review .wrapper .reviews .customer-details {
+	  text-align: center;
+	  top: 100px;
+	}
+	.top-review .wrapper .reviews .customer-details h4 {
+	  margin-top: 0;
+	  margin-bottom: 10px;
+	}
+}
+@media (max-width: 650px) {
+	.top-review .wrapper {
+
+	}
+	.top-review .wrapper .reviews {
+	  padding-left: 0;
+	  padding-top: 250px;
+	}
+	.top-review .wrapper .reviews .customer-details {
+	  text-align: left;
+	}
+	.top-review .wrapper .reviews .contents {
+		padding-left: 0;
+	}
+	.top-review .wrapper .reviews .photo {
+		left: 0;
+	}
+}
+.review .custom-offset-3 {
+	@media (max-width:767px) {
+		padding-right: 320px;
+	}
+	@media (max-width:550px) {
+		padding-right: 200px;
+	}
+	@media (max-width:450px) {
+		padding-right: 50px;
+	}
+}

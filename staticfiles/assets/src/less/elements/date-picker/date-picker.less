@@ -1,0 +1,63 @@
+@import "../common/common-style.less"; 
+div.DateRangePickerInput {
+  background: @rq-ash-color4;
+  width: 100%;
+  border: 0;
+}
+div.DateRangePicker {
+    width: 100%;
+}
+div.DateInput {
+	background: @rq-ash-color4;
+	border-radius: 2px;
+}
+.DateInput__display-text {
+    font-family: 'Open-sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: @rq-primary-color;
+}
+.form-date .select2-container {
+    width: 100% !important;
+}
+.form-date .select2-container--default .select2-selection--single {
+    border: 0;
+    height: 50px;
+    border-radius: 2px;
+    background: @rq-ash-color4;
+}
+.form-date .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-family: 'Open-sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: @rq-primary-color;
+    padding-top: 12px;
+    padding-left: 15px;
+}
+.form-date .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 12px;
+    right: 10px;
+}
+// datepicker responsive
+.DateRangePicker__tether--show.DateRangePicker__tether-element {
+    z-index: 9999;
+}
+@media (max-width:767px) {
+    .DayPicker--horizontal .DayPicker__week-header {
+        display: none;
+    }
+    .DayPicker--horizontal .DayPicker__week-header:first-of-type {
+        width: 100% !important;
+        display: block;
+    }
+    .DayPicker--horizontal {
+        width: 320px !important;
+    }
+    .transition-container--horizontal {
+        width: 320px !important;
+    }
+}

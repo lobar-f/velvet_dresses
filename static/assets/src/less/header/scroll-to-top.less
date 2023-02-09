@@ -1,0 +1,52 @@
+@import "../elements/common/common-style.less"; 
+#go-to-top {
+	display: none;
+		i.fa {
+		position: fixed;
+		bottom: 50px;
+    right: 15px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		color: @rq-white-color;
+		background: @rq-secondary-color;
+		font-size: 38px;
+		text-align: center;
+		border: 2px solid @rq-secondary-color;
+		z-index: 99999;
+		line-height: 30px;
+		.transition(@time: 0.4s);
+		@media (max-width:1500px) {
+			// bottom: 100px;
+			// right: 15px;
+		}
+	}
+}
+#gl-circle-loader-wrapper {
+    background-color: @rq-white-color;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000000;
+    margin-top: 0px;
+    top: 0px;
+}
+#gl-circle-loader-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gl-circle-load {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+    transform: scale(0.6);
+    -o-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+}
