@@ -1,0 +1,30 @@
+@import "../elements/common/common-style.less"; 
+.top-bar {
+	height: 35px;
+	background: @rq-primary-color;
+	position: relative;
+	.transition(@time: 0.4s);
+	p {
+		font-style: italic;
+		color: @rq-lighter-coffee-color;
+		margin-top: 8px;
+		@media (max-width: 480px) {
+			font-size: 10px;
+		}
+	}
+	i {
+		&.ion-ios-close-empty {
+			color: @rq-lighter-coffee-color;
+			font-size: 35px;
+	    position: absolute;
+	    cursor: pointer;
+	    right: 20px;
+	    top: -5px;
+		}
+	}
+	&.hide-it {
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+	}
+}

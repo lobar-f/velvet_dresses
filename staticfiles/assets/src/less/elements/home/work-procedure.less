@@ -1,0 +1,45 @@
+@import "../common/common-style.less"; 
+.work-procedure {
+	h2 {
+		margin-bottom: 60px; 
+		@media (max-width: 650px) {
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+	.inner {
+		text-align: center;
+		a {
+			> img {
+				width: 138px;
+				margin: 0 auto;
+			}
+		}
+		> h3 {
+			position: relative;
+			margin: 50px 0;
+			@media (max-width: 991px) {
+				margin: 20px 0 50px;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 2px;
+				background: @rq-secondary-color;
+				left: calc(~"50% - 15px");
+				bottom: -25px;
+			}
+		}
+		> p {
+			padding: 0 45px;
+			@media (max-width: 991px) {
+				padding: 0;
+				margin-bottom: 25px;
+			}
+			a {
+				color: @rq-secondary-color;
+			}
+		}
+	}
+}

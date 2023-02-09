@@ -1,0 +1,29 @@
+@import "../common/common-style.less"; 
+.rq-picker {
+	margin-top: 12px;
+	.DateInput {
+		width: 112px;
+		padding-top: 4px;
+	}
+	.DateRangePickerInput {
+		background: none;
+		height: 40px;
+		border: 1px solid @rq-ash-color4;
+	}
+	.DateInput {
+		background: none;
+	}
+	.DateInput__display-text {
+		font-family: 'Forum', cursive;
+		font-weight: 400;
+		color: @rq-ash-color2;
+	}
+}
+@media (min-width:768px) and (max-width: 1200px) {
+	.rq-picker .DateRangePickerInput {
+    height: 86px;
+  }
+  .rq-picker.rq-picker2 .DateRangePickerInput {
+    height: 40px;
+  }
+}

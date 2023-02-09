@@ -1,0 +1,73 @@
+@import "../common/common-style.less"; 
+.faq {
+	h2 {
+		margin-bottom: 60px;
+		@media (max-width: 650px) {
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+	margin: 0;
+	.rq-accordion {
+		padding: 0 100px;
+		@media (max-width: 650px) {
+			padding: 0;
+		}
+		.panel-default {
+			border: none;
+			background: none;
+			border-radius: 0;
+			margin-bottom: -6px;
+			border-bottom: 1px solid @rq-ash-color3;
+			border-top: 1px solid @rq-ash-color3;
+			.panel-heading {
+				background: none;
+				@media (max-width: 650px) {
+					padding: 10px 0;
+				}
+				.panel-title {
+					a {
+						font-family: 'Forum', cursive;
+						font-size: 16px;
+						display: block;
+						color: @rq-primary-color;
+						position: relative;
+						i {
+							position: absolute;
+							right: 0;
+							top: 9px;
+						}
+					}
+				}
+				.panel-body {
+				}
+			}
+		}
+	}
+} 
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+    border-top: 1px solid @rq-ash-color3;
+    margin-left: 90px;
+    padding-left: 0;
+    font-family: 'Forum', cursive;
+		font-size: 16px;
+		line-height: 23px;
+		@media (max-width: 650px) {
+			margin-left: 35px;
+		}
+}
+
+.delivery {
+	background: @rq-lighter-coffee-color4;
+		.font-25-pla-reg-0 {
+			padding-left: 100px;
+			margin-bottom: 30px;
+			@media (max-width: 650px) {
+				padding-left: 0;
+				text-align: center;
+			}
+			&.mt-50 {
+				margin-top: 50px;
+			}
+		}
+}

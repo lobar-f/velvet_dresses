@@ -1,0 +1,320 @@
+@import "../common/common-style.less"; 
+.product-details {
+	.product_details_slider {
+		position: relative;
+		@media (min-width: 1200px) {
+			padding-left: 110px;
+		}
+		ul { 
+			&.slides {
+				li {
+					img {
+						float: right;
+					}
+				}
+			}	
+		}
+		.flex-control-nav {
+			&.flex-control-thumbs {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: auto;
+				height: 160px;
+				z-index: 9;
+				bottom: inherit;
+				background: @rq-white-color;
+				margin: 0;
+				li {
+					display: block;
+					float: none;
+					width: 100%;
+					margin-bottom: 12px;
+					img {
+
+					}
+				}
+			}
+		}
+		.customer-photo {
+			position: absolute;
+			width: 90px;
+			left: 0;
+			top: 190px;
+			height: 220px;
+			z-index: 9;
+			p {
+				font-size: 14px;
+				letter-spacing: 1px;
+				font-family: 'Forum', cursive;
+			}
+			a {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.rq-inner {
+		.font-30-for-reg-0 {
+			font-size: 28px;
+		}
+		h3 {
+			&.font-18-for-reg-0 {
+				margin-top: 15px;
+				margin-bottom: 5px;
+				letter-spacing: 1px;
+				span {
+					color: @rq-secondary-color;
+				}
+			}
+		}
+		a {
+			&.rating {
+				i {
+					font-size: 15px;
+					display: inline-block;
+					padding: 1px 3px;
+					color: @rq-secondary-color;
+					&.ash {
+						color: @rq-ash-color3;
+					}
+				}
+				span {
+					&.ash {
+						color: @rq-ash-color2;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		h4 {
+			font-family: 'Forum', cursive;
+			font-size: 26px;
+			position: relative;
+			a {
+				i {
+					position: absolute;
+					right: 0;
+					top: 10px;
+				}
+			}
+			> span {
+				color: @rq-secondary-color;
+				margin-left: 10px;
+			}
+			> small {
+				font-size: 18px;
+			}
+		}
+		.select-box {
+			margin-top: 35px; 	
+		}
+		.ex-padd {
+			margin-top: 25px;
+			.font-18-for-reg-1 {
+				margin-right: 10px;
+				color: @rq-ash-color;
+			}
+		}	
+		.rq-margin {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			a {
+				width: 125px;
+				height: 30px;
+				font-size: 16px;
+				margin-right: 20px;
+				border-radius: 2px;
+				@media (max-width: 991px) {
+					margin-right: 15px;
+				}
+				.transition(@time: 0.4s);
+				&.reserve {
+					background: @rq-secondary-color;
+					color: @rq-white-color2;
+					border: none;
+					display: inline-block;
+					text-align: center;
+					line-height: 27px;
+					@media (max-width: 1200px) {
+						margin-bottom: 10px;
+					}
+				}
+			}
+			button {
+				width: 125px;
+				height: 30px;
+				font-size: 16px;
+				display: inline-block;
+				text-align: center;
+				margin-right: 20px;
+				border-radius: 2px;
+				.transition(@time: 0.4s);
+				&.wishlist {
+					background: @rq-white-color;
+					border: 1px solid @rq-ash-color4;
+					color: @rq-ash-color;
+					&:hover {
+						background: @rq-secondary-color;
+						color: @rq-white-color2;
+						border: none;
+					}
+				}
+			}
+			.social-icon  {
+				text-align: right;
+				> a {
+					i {
+						font-size: 20px;
+						color: @rq-slate-tray-color;
+						padding: 1px 5px;
+						&:hover {
+							color:  @rq-secondary-color;
+						}
+					}
+				}
+			}
+		}
+		.rq-accordion {
+			margin-top: 40px;
+			.panel {
+				&.panel-default {
+					border: none;
+					margin: 0;
+					.panel-heading {
+						background: none;
+						border-top: 1px solid @rq-ash-color4;
+						padding: 10px 10px;	
+						.panel-title {
+							a {
+								font-size: 20px;
+								color: @rq-ash-color;
+							}
+						}
+					}
+					.panel-body {
+						padding: 0 10px 15px;
+						font-size: 15px;
+						color: @rq-ash-color;
+						border-top: none;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+	}
+	.complete-look {
+		margin-top: 40px;
+		h4 {
+			&.font-30-for-reg-3 {
+				text-transform: uppercase;
+				margin-bottom: 40px;
+			}
+		}
+		.inner {
+			text-align: center;
+			position: relative;
+			.hover {
+				position: absolute;
+				left: calc(~"50% - 78px");
+				top: calc(~"50% - 16px");
+				transform: scale(0);
+				.transition(@time: 0.4s);
+				.font-18-for-reg-1 {
+					background: rgba(57, 38, 6, .7);
+					color: @rq-white-color;
+					padding: 7px 38px;
+					transform: scale(0);
+				}
+
+			}
+			&:hover .hover {
+				transform: scale(1);
+			}
+		}
+	}
+}	
+
+.flex-direction-nav a:before {
+    font-size: 35px;
+  }
+
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: none;
+}
+
+
+// SELECT2 CUSTOM STYLE
+.product-details .rq-inner .select-box .select2-container--default {
+    width: 125px !important;
+    margin-right: 10px;
+}
+.product-details .rq-inner .select-box .select2-container--default .select2-selection--single {
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid @rq-ash-color4;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    outline: 0;
+}
+
+// CUSTOM RADIO BOX
+.rq-radiobox {
+	input[type="radio"] {
+		display: none;
+	}
+	input[type="radio"]:checked + label:before {
+	  content: "";
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: @rq-secondary-color;
+	}
+	input[type="radio"]:checked + label {
+		color: @rq-primary-color;
+	}
+	label {
+		position: relative;
+		padding-left: 25px;
+		margin-right: 10px;
+		cursor: pointer;
+		font-family: 'Forum', cursive;
+		color: @rq-ash-color;
+		&:after {
+			content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 1px;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    border: 1px solid @rq-ash-color2;
+		}
+	}
+}
+.product_details_slider .flex-direction-nav {
+	display: none;
+}
+@media (max-width: 1200px) {
+	.product-details .product_details_slider .customer-photo {
+		display: none;
+	}
+	.product-details .product_details_slider ul.slides li img {
+	  float: none;
+	}
+	.product-details .product_details_slider .flex-control-nav.flex-control-thumbs {
+		position: static;
+		text-align: left;
+		height: 113px;
+	}
+	.product-details .product_details_slider .flex-control-nav.flex-control-thumbs li {
+    display: inline-block;
+    width: auto;
+    margin: 10px 10px 0 0;
+  }
+
+}

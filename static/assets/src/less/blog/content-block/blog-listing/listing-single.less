@@ -1,0 +1,152 @@
+@import "../../../elements/common/common-style.less"; 
+.rq-listing-wrapper {
+  position: relative;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  .rq-listing-single {
+    text-align: center;
+    position: relative;
+    margin-bottom: 70px;
+    .rq-listing-title {
+      text-transform: capitalize;
+      margin: 0;
+      padding-top: 37.5px;
+      padding-bottom: 15px; 
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 2px;
+      font-size: 24px;
+      a {
+        color: @rq-primary-color;
+        &:hover {
+          color: @rq-ash-color6;
+        }
+      }
+    }
+    .rq-listing-meta {
+      position: relative;
+      margin-bottom: 20px;
+      .v-line {
+        padding: 0 10px;
+      }
+      a {
+        font-family: 'Open Sans', sans-serif;
+        color: @rq-ash-color6;
+        font-size: 13px;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    .post-content,
+    .post-content p {
+      font-size: 16px;
+      display: block;
+      color: #666666;
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-family: 'Forum', cursive;
+      line-height: 25px;
+      .first-line {
+        display: block;
+      }
+    }
+    .continue-btn {
+      text-transform: capitalize;
+      letter-spacing: 4px;
+      i {
+        &.arrow_right {
+          font-size: 18px;
+          position: relative;
+          &:before {
+            position: absolute;
+            right: -23px;
+            top: 2px;
+            content: "\f3d6";
+            display: inline-block;
+            font-family: "Ionicons";
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            text-rendering: auto;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rq-listing-standard-image-post {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+.rq-listing-standard-video-post {
+  position: relative;
+  iframe {
+    width: 100%;
+  }
+  .feature-image {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    i {
+      position: absolute;
+      left: 45%;
+      top: 45%;
+      z-index: 30;
+      height: 50px;
+      width: 50px;
+      background: #fff;
+      color: #000;
+      text-align: center;
+      line-height: 52px;
+      border-radius: 50%;
+      font-size: 24px;
+      padding-left: 5px;
+      cursor: pointer;
+    }
+  }
+}
+.rq-listing-gallery-post {
+  position: relative;
+  .rq-gallery-content {
+    position: relative;
+    width: 100%;
+    .flexslider {
+      margin: 0;
+    }
+    .custom-navigation {
+      position: absolute;
+      top: 46%;
+      z-index: 50;
+      width :100%;
+      a {
+   
+        i {
+          font-weight: bold;
+        }
+      }
+      .flex-prev {
+        position: absolute;
+        left: 20px;
+      }
+      .flex-next {
+        position: absolute;
+        right: 20px;
+      }
+    }
+  }
+}
