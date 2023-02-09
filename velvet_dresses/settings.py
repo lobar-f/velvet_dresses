@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$svl)fo^-t0ouo4g=od=kmi1ae)6t7w@zg-*z&*^7&g8qngjm!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['velvet-dresses.uz', '128.199.179.61']
 
 
 # Application definition
@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'velvet_dresses.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
