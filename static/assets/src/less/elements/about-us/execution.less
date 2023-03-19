@@ -1,0 +1,37 @@
+@import "../common/common-style.less"; 
+.execution {
+	background: url(../img/background/bg-2.jpg) no-repeat;
+	background-size: cover;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	.elements {
+		text-align: center;
+		width: 100%;
+		h1, h4 {
+			font-family: 'Playfair Display', serif;
+			color: @rq-lighter-coffee-color2;
+			letter-spacing: 5px;
+			font-size: 55px;
+			line-height: 62px;
+			font-weight: 600;
+			@media (max-width: 767px) {
+				font-size: 30px;
+				line-height: 36px;
+
+			}
+		}
+		h4 {
+			font-size: 30px;
+			line-height: 36px;
+			margin: 50px 0;
+			@media (max-width: 767px) {
+				font-size: 25px;
+			}
+		}
+		a {}
+	}
+	&.executiontwo {
+		background: url(../img/background/bg-3.jpg) no-repeat;	
+	}
+}

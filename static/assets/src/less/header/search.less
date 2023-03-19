@@ -1,0 +1,92 @@
+@import "../elements/common/common-style.less"; 
+.header-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(34,34,34,0.95);
+    opacity: 0;
+    z-index: 99999;
+    transition: all 0.3s ease 0s;
+}
+.header-search.open {
+    visibility: visible;
+    opacity: 1;
+}
+.header-search.open {
+    visibility: visible;
+    opacity: 1;
+}
+.search-global {
+    position: absolute;
+    top: 50vh;
+    margin-top: -120px;
+}
+.search-global__input {
+    width: 100%;
+    padding-right: 50px;
+    padding-bottom: 12px;
+    font: 700 72px Montserrat;
+    color: @rq-white-color;
+    border: none;
+    border-bottom: 1px solid @rq-white-color4;
+    background-color: transparent;
+    opacity: 1;
+    outline: 0;
+    @media (max-width:767px) {
+       font: 700 30px Montserrat; 
+    }
+    @media (max-width:480px) {
+        padding-right: 30px;
+    }
+}
+.search-global__input::-webkit-input-placeholder {
+  color: @rq-white-color;
+}
+.search-global__btn {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    font-size: 30px;
+    color: @rq-white-color;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.stroke {
+    font-family: 'Stroke-Gap-Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.search-global__note {
+    margin-top: 41px;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: @rq-ash-color7;
+}
+.search-close.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border: none;
+    background-color: @rq-white-color;
+    opacity: 1 !important;
+    z-index: 999;
+    transition: all 0.3s;
+}
+.search-close.close i.fa.fa-times {
+    display: block;
+    padding: 21px 1px;
+}

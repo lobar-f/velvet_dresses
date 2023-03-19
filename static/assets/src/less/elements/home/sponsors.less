@@ -1,0 +1,49 @@
+@import "../common/common-style.less"; 
+.sponsors {
+	background: @rq-lighter-coffee-color3;
+	.container-fluid {
+		&.wrapper { 
+			padding: 0 200px;
+			@media (max-width: 991px) {
+				padding: 0 90px;
+			}
+			.sponsors-carousel {
+				.item {
+					> a {
+						text-align: center;
+						display: block;
+						> img {
+							max-width: 100%;
+							width: auto;
+							display: inline-block;
+						}
+					}
+				}
+				.owl-nav {
+					.owl-next {
+						right: -90px;
+					}
+					.owl-prev {
+						left: -90px;
+					}
+					[class*='owl-'] {
+						position: absolute;
+						top: calc(~"50% - 35px");
+						background: none;
+						height: 75px;
+						overflow: hidden;
+						
+						&:hover img {
+							position: relative;
+							top: -75px;
+						}
+					}
+
+				}
+				.owl-dots {
+					display: none;
+				}
+			}
+		}
+	}
+}

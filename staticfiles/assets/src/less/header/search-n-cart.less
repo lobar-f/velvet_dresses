@@ -1,0 +1,81 @@
+@import "../elements/common/common-style.less"; 
+.main-nav {
+	.navbar-form {
+		&.dr-search {
+			position: absolute;
+			right: 100px;
+			top: 21px;
+			@media @res1400 {
+				right: 35px;
+			}
+			@media (max-width: 1200px) {
+				right: 70px;
+			}
+			@media (max-width: 767px) {
+				top: 10px;
+				right: 80px;
+			}			.rq_btn_header_search {
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	ul {
+		&.navbar-nav {
+			&.dr-cart {
+				position: absolute;
+				right: 150px;
+				top: 17px;
+				@media @res1400 {
+					right: 80px;
+				}
+				@media (max-width: 1200px) {
+					top: 21px;
+					right: 105px;
+				}
+				li {
+					display: inline-block;
+					a {
+						i {
+							display: inline-block;
+							margin-left: 5px;
+							&.fa {
+								font-size: 14px;
+							}
+						}
+						&.rq-shopping-cart-items-list {
+							&.login {
+								@media (max-width: 580px) {
+									font-size: 12px;
+								}
+							}
+							background: none;
+							text-transform: uppercase;
+							&:hover {
+								background: none;
+							}
+							@media (max-width: 580px) {
+								font-size: 0;
+								padding: 10px 3px;
+							}
+							i {
+								@media (max-width: 480px) {
+									font-size: 13px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.navbar-default {
+		.navbar-nav>.open>a {
+			background: none;
+			&:hover {
+				background: none;
+			}
+		}
+	}  
+}

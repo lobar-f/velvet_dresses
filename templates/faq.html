@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %} 
+
+ {% block content %}
+
+   
+    <div id="main-wrapper"> 
+
+      <div class="rq-page-content">
+        <div class="blog-post-single-wrapper">
+          <div class="single-post-feature-img">
+            <img src="{% static 'assets/dist/img/post-single/questions.jpg' %}" alt="">
+          </div>
+          <div class="container">
+            <div class="rq-content-block">
+              <div class="rq-title-container bredcrumb-title text-center">
+                <h2 class="rq-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+                <ol class="breadcrumb rq-subtitle">
+                  <li><a href="/">ГЛАВНАЯ</a></li>
+                  <li class="active">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</li>
+                </ol>
+              </div>
+              
+		<div class="faq base-padd">
+
+
+		<div class="panel-group rq-accordion" id="accordion11" role="tablist" aria-multiselectable="true">
+			{% for q in questions %}
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="headingOne">
+		      <h4 class="panel-title">
+		        <a role="button" data-toggle="collapse" data-parent="#accordion11" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		         {{q.question}}
+		          <i class="fa fa-angle-up pull-right" aria-hidden="true"></i>
+		        </a>
+
+		      </h4>
+		    </div>
+		    <div id="collapseOne" class="panel-collapse collapse 	" role="tabpanel" aria-labelledby="headingOne">
+
+		      <div class="panel-body">
+			
+		        
+{{q.answer}}
+		      </div>
+		    </div>
+		  </div>
+		  {% endfor %}
+		
+
+		</div><!-- /.accordion -->
+
+</div><!-- /.faq -->
+	</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.team -->
+
+{% endblock %}

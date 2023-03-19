@@ -1,0 +1,63 @@
+@import "../elements/common/common-style.less"; 
+.rq-shopping-cart-inner-div {
+	.rq-login {
+		padding: 0 15px;
+		form {
+			input {
+				height: 40px;
+				border-radius: 2px;
+				border: 1px solid @rq-primary-color;
+			}
+			button {
+				height: 40px;
+				border-radius: 2px;
+				background: @rq-primary-color;
+				border: 1px solid @rq-primary-color;
+				text-align: center;
+				width: 100%;
+				color: @rq-white-color;
+				text-transform: uppercase;
+			}
+			p {
+				&.or {
+					position: relative;
+					text-align: center;
+					&:before {
+						content: '';
+						position: absolute;
+						width: calc(~"50% - 25px");
+						left: 0;
+						top: 9px;
+						background: @rq-ash-color4;
+						height: 1px;
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						width: calc(~"50% - 25px");
+						top: 9px;
+						right: 0;
+						background: @rq-ash-color4;
+						height: 1px;
+					}
+				}
+			}
+			div {
+				&.form-inner {
+					margin-bottom: 15px;
+					span {
+						margin-right: 50px;
+					}
+					a {
+						display: inline-block !important;
+						margin-top: 0 !important;
+						margin-right: 15px;
+
+					}
+				}
+			}
+		}
+	}
+	&.ex-fix {
+	}
+}

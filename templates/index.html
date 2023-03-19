@@ -1,0 +1,487 @@
+{% extends "base.html" %}
+{% load static %} 
+
+ {% block content %}
+
+
+<div class="banner">
+	<div class="owl-carousel owl-theme dr-main-slider">
+{% for m in main_image|slice:":1" %}
+	<div class="item">
+    	<img src="{{m.image.url}}"  alt="" class="img-responsive">
+    	<div class="text">
+    		<h2>платья </h2>
+    		<h3>премиум-класса <span style="padding-left: 30px">	</span></h3>
+
+<a class="" href="{% url 'products:products' %}" >Посмотреть каталог</a>
+    	</div><!-- /.text --> 
+    </div>
+    <div class="item">  
+    {% endfor%}	
+    {% for m in main_image|slice:"1:2" %}
+    	<img src="{{m.image.url}}"  class="img-responsive">
+    	<div class="text2">
+    		<h2>Новая коллекция </h2> 
+    		<p>ПРОКАТ ЭКСЛЮЗИВНЫХ ПЛАТЬЕВ</p>
+    		<a  href="{% url 'products:products' %}" >Посмотреть каталог</a>
+    	</div><!-- /.text -->
+    	</div><!-- /.text2 --> 
+    	
+     
+    </div>
+ 	</div> <!-- /.dr-main-slider --> 
+ 	{%endfor%}
+  
+</div><!-- banner -->
+
+
+
+
+
+
+<div class="work-procedure base-padd">
+	<div class="container">
+		<h2>Преимущества проката платьев у нас</h2></div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="inner">
+					<a href="#"><img width='138' height='138' src="{% static 'assets/dist/img/work-procedure/price.png' %}" alt="" class="img-responsive"></a>
+					<h3 class="font-30-for-reg-0">Платье на любой бюджет</h3>
+					<p class="font-16-for-reg-0">Стоимость проката от 300,000 cум. Экономия 70 - 80 % по сравнению с покупкой платья.</p>
+				</div><!-- /.inner -->	
+			</div> <!-- /.col-md-3  -->
+			<div class="col-md-4">
+				<div class="inner">
+					<a href="#"><img width='138' height='138' src="{% static 'assets/dist/img/work-procedure/dress.png' %}" alt="" class="img-responsive"></a>
+					<h3 class="font-30-for-reg-0">Идеальное состояние платьев</h3>
+					<p class="font-16-for-reg-0">Коллекция Velvet Dresses постоянно обновляется. Платья, которые были в прокате уже много раз, мы продаем.   </p>
+				</div><!-- /.inner -->	
+			</div> <!-- /.col-md-3  -->
+			<div class="col-md-4">
+				<div class="inner">
+					<a href="#"><img width='138' height='138' src="{% static 'assets/dist/img/work-procedure/33.png' %}" alt="" class="img-responsive"></a>
+					<h3 class="font-30-for-reg-0">Гарантия качества</h3>
+					<p class="font-16-for-reg-0">
+Недорогую услугу проката вечерних платьев уже высоко оценили сотни наших клиентов.</p>
+				</div><!-- /.inner -->	
+			</div> <!-- /.col-md-3  -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.work-procedure -->
+
+
+
+<div class="content base-padd">
+	<div class="container-fulid">
+		<div class="content-wrapper">
+
+
+			<div class="rq-rental-item-column width-32per">
+				<div class="rq-rental-item width-32per">
+					<div class="img-wrapper">
+						<img src="{% static 'assets/dist/img/content/IMG_1923.jpg' %}"  alt=""/>
+						<div class="hover">
+							<h3 class="font-40-pla-reg-2"><a href="#">Новая коллекция</a></h3>
+							<p class="font-14-for-reg-2"></p>
+							<a href="{% url 'products:products' %}" class="font-22-for-reg-2">Посмотреть каталог</a>
+						</div><!-- /.hover -->
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+
+				<div class="rq-rental-item width-32per">
+					<div class="img-wrapper">
+						<img src="{% static 'assets/dist/img/content/girlss.jpg' %}"  alt=""/>
+						<div class="hover">
+							<h3 class="font-40-pla-reg-2"><a href="#">Платья для девочек</a></h3>
+							<a href="#"class="font-22-for-reg-2">Посмотреть каталог</a>
+
+						</div><!-- /.hover -->
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+			</div>
+
+			<div class="rq-rental-item-column width-36per">
+				<div class="rq-rental-item width-36per">
+					<div class="img-wrapper">
+						<img src="{% static 'assets/dist/img/content/IMG_911.jpg' %}"  alt=""/>
+						<div class="hover">
+							<h3 class="font-40-pla-reg-2"><a href="#">Платья для фотосессии</a></h3>
+							<a href="{% url 'products:products' %}" class="font-22-for-reg-2">Посмотреть каталог</a>
+						</div><!-- /.hover -->
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+
+				<div class="rq-rental-item width-36per">
+					<div class="img-wrapper">
+						<img src="{% static 'assets/dist/img/content/logo_3.jpg' %}"  alt=""/>
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+
+				<div class="rq-rental-item width-36per">
+					<div class="img-wrapper fix-height">
+						<img src="{% static 'assets/dist/img/content/muslim.jpg' %}"  alt=""/>
+						<div class="hover">
+							<h3 class="font-40-pla-reg-2"><a href="#">Платья для покрытых</a></h3>
+							<a href="{% url 'products:products' %}" class="font-22-for-reg-2">Посмотреть каталог</a>
+						</div><!-- /.hover -->
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+			</div>
+
+			<div class="rq-rental-item-column width-32per">
+				<div class="rq-rental-item width-32per">
+					<div class="img-wrapper">
+						
+						<img src="{% static 'assets/dist/img/content/IMG_9061.jpg' %}"  alt=""/>
+						<div class="hover">
+							<h3 class="font-40-pla-reg-2"><a href="#">Вечерние платья</a></h3>
+							<p class="font-14-for-reg-2"></p>
+							<a href="{% url 'products:products' %}" class="font-22-for-reg-2">Посмотреть каталог</a>
+						</div><!-- /.hover -->
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+
+				<div class="rq-rental-item width-32per" >
+					<div class="img-wrapper">
+						<img src="{% static 'assets/dist/img/content/national2.jpg' %}"  alt=""/>
+						<div class="hover">
+							<h3 class="font-40-pla-reg-2"><a href="#">Национальная одежда</a></h3>
+							<a href="{% url 'products:products' %}" class="font-22-for-reg-2">Посмотреть каталог</a>
+						</div><!-- /.hover -->
+					</div><!-- /.img-wrapper -->
+				</div><!-- /.rq-rental-item -->
+			</div>
+
+		</div><!-- /.content-wrapper -->
+	</div><!-- /.container-fulid -->
+</div><!-- /.content -->
+
+
+
+
+
+
+
+<div class="favorites base-padd">
+<h2>новая коллекция</h2>
+	<div class="container">
+		<div class="owl-favorites owl-carousel owl-theme">
+
+			{% for product in latest_products %}
+	    <div class="item">
+	    	<figure> 
+	    		<img src="{{product.image_thumbnail.url}}"  alt="{{product.name}}">
+	    		<a href="{{ product.get_absolute_url }}">Aрендовать</a>
+	    	</figure>
+	    	<h3 class="font-20-for-reg-0">{{product.name}}</h3>	
+	    	<p class="font-16-for-reg-0">Размер: {{product.size}}</p>
+	    	
+	    		
+	       </div><!-- /.item -->
+	
+{% endfor %}
+	    
+
+
+	    
+
+    </div><!-- /.owl-favorites -->
+	</div><!-- /.container -->
+
+
+ <br><br><br>
+
+
+
+
+<h2>Наши фавориты</h2>
+	<div class="container">
+		<div class="owl-favorites owl-carousel owl-theme">
+	    
+{% for product in favourite_products %}
+	     <div class="item">
+	    	<figure> 
+	    		<img src="{{product.image_thumbnail.url}}"  alt="{{product.name}}">
+	    		<a href="{{ product.get_absolute_url }}">Aрендовать</a>
+	    	</figure>
+	    	<h3 class="font-20-for-reg-0">{{product.name}}</h3>	
+	    	<p class="font-16-for-reg-0">Размер: {{product.size}}</p>
+	    	
+	    		
+	       </div><!-- /.item -->
+			{% endfor %}
+
+
+    </div><!-- /.owl-favorites -->
+	</div><!-- /.container -->
+</div><!-- /.favorites -->
+
+
+
+<div class="newsletter base-padd">
+
+	<h2>Милые девушки, это важно!</h2>
+	<div class="container">
+			<p style="font-size: 24px;">Cообщаем ,что вы несёте юридическую ответственность за сохранность платья / аксессуаров VELVET DRESSES ❤️ <br> 
+
+Eсли по какой-либо причине вы отказываетесь от Забронированного Платья ,то сумма задатка не возвращается <br> </p>
+		
+	</div><!-- container -->
+</div><!-- /.newsletter -->
+
+
+<div class="community base-padd">
+	<h2>Спасибо, что выбрали нас</h2>
+	
+	<div class="container-fluid wrapper">
+			<div class="row">
+				<div class="col-md-5 mb-30">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="element">
+								<picture>
+									 <source srcset="{% static 'assets/dist/img/community/15.jpg' %}" media="(max-width: 991px)">
+									 <img src="{% static 'assets/dist/img/community/15.jpg' %}" alt="1"/>
+									</picture>
+								<div class="caption">
+									<a href="#" class="font-14-ope-reg-1"><span>"</span> Отношение к клиенту на 5+ Стоимость аренды платья очень приятная.<span>"</span></a>
+								</div><!-- /.caption -->
+							</div><!-- /.element -->
+						</div>
+						<div class="col-sm-6">
+							<div class="element">
+							<picture>
+							<source srcset="{% static 'assets/dist/img/community/16.jpg' %}" media="(max-width: 991px)">
+									 <img src="{% static 'assets/dist/img/community/16.jpg' %}" alt="1"/>
+									</picture>
+								
+								<div class="caption">
+									<a href="#" class="font-14-ope-reg-1"><span>"</span>Спасибо большое за сервис.<span>"</span></a>
+								</div><!-- /.caption -->
+							</div><!-- /.element -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 mb-30">
+					<div class="element">
+						<picture>
+							<source srcset="{% static 'assets/dist/img/community/7.jpg' %}" media="(max-width: 991px)">
+									 <img src="{% static 'assets/dist/img/community/7.jpg' %}" alt="1"/>
+						</picture>
+						<div class="caption">
+							<a href="#" class="font-14-ope-reg-1"><span>"</span>Консультант помог с выбором определиться с платьем. <span>"</span></a>
+						</div><!-- /.caption -->
+					</div><!-- /.element -->
+				</div>
+				<div class="col-md-4 mb-30">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="element">
+								<picture>
+									<source srcset="{% static 'assets/dist/img/community/18.jpg' %}" media="(max-width: 991px)">
+									 <img src="{% static 'assets/dist/img/community/18.jpg' %}" alt="1"/>
+								</picture>
+								<div class="caption">
+									<a href="#" class="font-14-ope-reg-1"><span>"</span>Если мне еще раз понадобится платье, обязательно возьму его тут в салоне.<span>"</span></a>
+								</div><!-- /.caption -->
+							</div><!-- /.element -->
+						</div>
+						<div class="col-sm-6">
+							<div class="element">
+								<picture>
+									<source srcset="{% static 'assets/dist/img/community/21.jpg' %}" media="(max-width: 991px)">
+									 <img src="{% static 'assets/dist/img/community/21.jpg' %}" alt="1"/>
+								</picture>
+								<div class="caption">
+									<a href="#" class="font-14-ope-reg-1"><span>"</span>Брала в прокат красивое вечернее платье. <span>"</span></a>
+								</div><!-- /.caption -->
+							</div><!-- /.element -->
+						</div>
+					</div>
+				</div>
+			</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.community -->
+
+
+
+<div class="count-up base-padd">
+	<div class="container-fluid wrapper">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="inner">
+					<div class="counter" data-count="9"><h1>0</h1></div>	
+					<h3 class="font-36-for-reg-3">профессиональные </h3>
+					<span class="font-24-for-reg-3">сотрудники</span>
+				</div><!-- /.inner -->
+			</div><!-- /.col-sm-3 -->
+		<div class="col-sm-4">
+				<div class="inner">
+					<div class="counter" data-count="300"><h1>0</h1></div>	
+					<h3 class="font-36-for-reg-3">Эксклюзивное </h3>
+					<span class="font-24-for-reg-3">Платье</span>
+
+				</div><!-- /.inner -->
+			</div><!-- /.col-sm-3 -->
+			<div class="col-sm-4">
+				<div class="inner">
+					<div class="counter" data-count="1241"><h1>0</h1></div>	
+					<h3 class="font-36-for-reg-3">Довольные </h3>
+					<span class="font-24-for-reg-3">клиенты</span>
+				</div><!-- /.inner -->
+			</div><!-- /.col-sm-3 -->
+			
+
+		</div>
+	</div><!-- /.container -->
+</div><!-- /.count-up -->
+
+
+	
+
+<div class="opinion base-padd">
+
+		<div class="owl-opinion owl-carousel owl-theme">
+		 <div class="item">
+    	<img src="{% static 'assets/dist/img/opinion/10.jpg' %}"  alt="">
+    	<p class="font-14-ope-reg-0">Феруза Норматова, актриса</p>
+    	<h3>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+    	</h3>
+    	<p class="edit">«Спасибо,Velvet-Dresses! Много раз выручали перед важным мероприятием! <br>	
+Всегда прекрасный выбор и хорошее обслуживание!»</p>
+    </div><!-- /.item -->
+    <div class="item">
+    	<img src="{% static 'assets/dist/img/opinion/12.jpg' %}" alt="">
+    	<p class="font-14-ope-reg-0">Сугдийона Азимова, актриса</p>
+    	<h3>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+    		<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+    	</h3>
+    	<p class="edit">Брала в прокат красивое вечернее платье.Оно было аккуратно, чистое, нигде не порванное. Консультант очень ответственный и отзывчивый, помогла мне определиться с фасоном и цветом платья. </p>
+    </div><!-- /.item -->
+   
+
+</div><!-- /.owl-opinion -->
+	</div><!-- /.container -->
+</div><!-- /.opinion -->
+
+
+<div  class="stores base-padd">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="inner-element">
+                    <i class="rq-phone"></i>
+                    <h4 class="font-25-pla-reg-0"  style="color: black">
+Позвоните нам</h4>
+                    <p>(+998) 71-268-48-47</p>
+                    <p>(+998) 99-484-46-70</p><br>
+                </div><!-- /.inner-element --> 
+
+                  <div class="inner-element">
+                  <i class="rq-clock"></i>
+                    <h4 class="font-25-pla-reg-0" style="color: black">Мы работаем</h4>
+                    <p>Понедельник - Воскресенье: 10.00 - 19.00</p><br>	
+                </div>
+
+                  <div class="inner-element">
+                <i class="rq-map-marker"></i>
+                    <h4 class="font-25-pla-reg-0" style="color: black">Наш адрес</h4>
+                    <div class="portion">
+                        <h4 class="font-18-pla-reg-2" style="color: black">Буюк Ипак Йули 103 дом 69 кв. </h4>
+                        <p>Ориентир: Мир Подарков </p>
+                    </div><!-- /.portion -->
+					<div class="portion">
+                        <h4 class="font-18-pla-reg-2"  style="color: black">Яхе Гулямова 11, Ц-1   </h4>
+                        <p>Ориентир:Косметка  </p>
+                    </div><!-- /.portion -->                  
+                </div><!-- /.inner-element -->
+                       
+              
+            </div>
+
+            <div class="col-sm-6">
+               
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.3171248721497!2d69.3278123284699!3d41.32636542713429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4f0b9789871%3A0x2660b441daac257d!2s103%20Buyuk%20Ipak%20Yuli%20Road%2C%20Tashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1638707329513!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.7723665367635!2d69.28673417741986!3d41.313815408621664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4d35c1247dd%3A0x5f00296a94ade112!2zMTEgWWFoeW8gR3VseWFtb3Yga28nY2hhc2ksINCi0L7RiNC60LXQvdGCLCBPYHpiZWtpc3Rvbg!5e0!3m2!1suz!2s!4v1658821231434!5m2!1suz!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><!-- /.col-sm-4 -->
+
+
+          
+           
+    </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.stores -->
+
+
+
+
+
+{% endblock content %}
+
+ 
+
+
+
+
+  
+
+
+
+ 
+ 
+
+
+ 
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+ 

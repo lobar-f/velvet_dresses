@@ -1,0 +1,72 @@
+@import "../common/common-style.less"; 
+.contact-form {
+	background: @rq-lighter-coffee-color2;
+	h2 {
+		margin-bottom: 60px;
+		@media (max-width: 650px) {
+			font-size: 30px;
+			line-height: 36px;
+		}
+
+	} 
+	.rq-form {
+		width: 620px;
+		margin: 0 auto;
+		@media (max-width: 767px) {
+			width: 100%;
+			padding: 0 15px;
+		}
+		.form-custom {
+			label {
+				font-family: 'Forum', cursive;
+				font-size: 18px;
+				letter-spacing: 2px;
+				font-weight: 400;
+				margin-bottom: 10px;
+			}
+			.input {
+				input {
+					height: 45px;
+					border-radius: 2px;
+					background: none;
+					box-shadow: none;
+					border: 1px solid @rq-lighter-coffee-color6;
+					margin-bottom: 20px;
+				}
+			}
+			.textarea {
+				textarea {
+					width: 100%;
+					border-radius: 2px;
+					background: none;
+					box-shadow: none;
+					border: 1px solid @rq-lighter-coffee-color6;
+					margin-bottom: 20px;
+					padding: 15px;
+					&:focus {
+						outline: 0;
+					}
+				}
+			}
+			button {
+				&.contact {
+					height: 45px;
+					width: 130px;
+					text-align: center;
+					background: @rq-primary-color;
+					border-radius: 2px;
+					font-family: 'Open-sans', Sans-serif;
+					font-size: 16px;
+					color: @rq-white-color;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					font-weight: 500;
+					
+				}
+			}
+			&.pull {
+				text-align: right;
+			}
+		}
+	}
+}

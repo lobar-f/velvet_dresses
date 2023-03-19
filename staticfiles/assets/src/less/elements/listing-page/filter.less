@@ -1,0 +1,116 @@
+@import "../common/common-style.less"; 
+.filter-list {
+	.filters {
+		.filter-header {
+			margin-top: 10px;
+			span {
+				text-transform: uppercase; 
+			}
+			a {
+				float: right;
+				font-size: 16px;
+			}
+		}
+		.dropdown {
+			margin-top: 20px;
+			border-top: 1px solid @rq-ash-color4;
+	    padding: 15px 0;
+	    position: relative;
+	    overflow: hidden;
+	    max-height: 500px;
+	    // max-height: 238px;
+	    .transition(@time: 0.5s);
+	    &.rq-collupse {
+	    	max-height: 38px;
+	    }
+	    &.forced {
+	    	max-height: 70px;
+	    }
+	    &.mb-0 {
+	    	margin-top: 0;
+	    }
+	    header {
+	    	margin-bottom: 18px;
+	    	span {
+	    		&.font-20-for-reg-0 {
+	    			color: @rq-ash-color2;
+	    		}
+	    	}
+	    	i {
+	    		&.fa-angle-down {
+	    			color: @rq-ash-color2;
+	    			position: absolute;
+	    			right: 18px;
+	    			top: 16px;
+	    			cursor: pointer;
+	    		}
+	    	}
+	    }
+	    > div {
+	    	.rq-checkbox {
+	    		position: relative;
+	    		input[type="checkbox"] {
+	    			display: none;
+	    		}
+	    		label {
+	    			padding-left: 35px;
+	    			cursor: pointer;
+	    			color: @rq-ash-color2;
+	    			font-size: 18px;
+	    			font-weight: 400;
+	    			&:before {
+							content: "\f096";
+							font: normal normal normal 14px/1 FontAwesome;
+							position: absolute;
+							font-size: 20px;
+							left: 1px;
+							top: -1px;
+	    			}
+	    		}
+	    		input[type="checkbox"]:checked + label:before {
+	    			content: "\f14a";
+	    			font-size: 19px;
+	    			color: @rq-pink-color;
+	    		}
+	    	}
+	    }
+	    .color-chooser {
+				span {
+					display: inline-block;
+					height: 17px;
+					width: 17px;
+					margin-right: 10px;
+					margin-bottom: 10px;
+					border-radius: 2px;
+					cursor: pointer;
+				}
+	    }
+	    .search {
+	    	input {
+	    		&.rq-search {
+	    			height: 40px;
+	    			width: 100%;
+	    			margin-bottom: 15px;
+	    			padding-left: 15px;
+	    			outline: 0;
+	    			font-size: 16px;
+	    			border: 1px solid @rq-ash-color4;
+	    			&::-webkit-input-placeholder {
+	    				color: @rq-ash-color2;
+	    			}
+	    		}
+	    	}
+	    }
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.filter-list .filters .dropdown header span.font-20-for-reg-0 {
+    font-size: 18px;
+  }
+  .filter-list .filters .dropdown header i.fa-angle-down {
+    right: 0;
+    top: 20px;
+  }
+}

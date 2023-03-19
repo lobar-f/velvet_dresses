@@ -1,0 +1,257 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">     
+  <head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Velvet-Dresses.uz | ПРОКАТ ЭКСЛЮЗИВНЫХ ПЛАТЬЕВ </title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Forum|Open+Sans:400,600|Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/dist/style/elements.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/dist/style/dateRangePicker.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/dist/style/header.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/dist/style/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/dist/style/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/dist/style/call.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/dist/img/favicon.ico' %}">
+</head>
+<body>
+    <!-- ==========================-->
+<!-- LOADER-->
+<!-- ================-->
+<div id="gl-circle-loader-wrapper">
+
+  <div id="gl-circle-loader-center">
+
+    <div class="gl-circle-load">
+      <img src="{% static 'assets/dist/img/ploading.gif' %}" alt="Page Loader">
+    </div>
+  </div>
+</div>
+
+<!-- <div class="top-bar" id="top_bar"> 
+    <div class="container">
+        <p class="font-14-ope-reg-0 text-center margin-0">…Enjoy 20% off when you sign up to become a member...</p>
+        <i class="ion-ios-close-empty"></i>
+    </div>
+</div>   -->
+<header class="main-nav" id="stickynav">
+<nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+         <a class="navbar-brand font-36-pla-reg-2" href='/'><img src="{% static 'assets/dist/img/logo.png' %}" alt="logo" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav">
+            <li class="active"><a href='/'>ГЛАВНАЯ</a></li>
+            <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Коллекция</a>
+          <ul class="dropdown-menu number2">
+            <li><a href="listing-page-list.html">List View</a></li>
+            <li><a href="listing-page2.html">Grid View</a></li>
+            <li><a href="listing-page.html">Grid View 2</a></li>
+          </ul>
+        </li> -->
+            <li class="dropdown">
+                <a href="{% url 'products:products' %}">все платья</a>
+                <a href='' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                
+            </li>
+        <li><a href="{% url 'products:terms' %}" >условия</a></li>
+        
+                
+        <li><a href="{% url 'products:about_us' %}" >О НАС</a></li>
+        <li><a href="{% url 'products:faq' %}" >Вопрос-Ответ</a></li>
+        <li><a href="{% url 'products:contacts' %}" >КОНТАКТЫ</a></li>
+        
+        
+        </ul>
+</nav>
+
+<ul class="nav navbar-nav dr-cart">
+
+  <li>
+    <a href="tel:998-71-268-48-47"   > <i style='color: white; font-size:20px; hover:None;' class="" aria-hidden="true" >(+998)71-268-48-47</i></a>
+    
+  </li>
+  
+</ul>
+
+
+
+
+
+</header><!-- /.End header -->
+<a href="tel:998-71-268-48-47" class="float" style='color:white;' target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a> 
+
+<!--Trigger-->
+
+<style>
+  /*Trigger Button*/
+.login-trigger {
+  color: #fff;
+  background:#691f1f;
+  padding: 15px 30px;
+  position: relative; 
+}
+
+/*Modal*/
+h4 {
+  font-weight: bold;
+  color: #fff;
+}
+.close {
+  color: #fff;
+  transform: scale(1.2)
+}
+.modal-content {
+  font-weight: bold;
+  background: #691f1f;
+}
+.form-control {
+  margin: 1em 0;
+}
+.form-control:hover, .form-control:focus {
+  box-shadow: none;  
+  border-color: #fff;
+}
+.username, .password {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;  
+}
+.form-control::-webkit-input-placeholder {
+  color: #fff;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+.login {
+  padding: 6px 20px;
+
+  background: white;
+  color: #691f1f;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.login:hover {
+  font-size: 15px;
+}</style>
+<!--Trigger-->
+
+
+<div id="login" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <button data-dismiss="modal" class="close">&times;</button>
+        <h4>Закажите бесплатный звонок 
+          <br>или позвоните прямо сейчас на <a style="color: white; font-weight: 600" href="tel:998-71-268-48-47"> 998-71-268-48-47</a></h4>
+        <form>
+          <input type="text" name="username" class="username form-control" placeholder="Имя"/>
+          <input type="tel" name="password" class="password form-control" placeholder="Телефон"/>
+          <input class="btn login" type="submit" value="Отправить" />
+        </form>
+      </div>
+    </div>
+  </div>  
+</div>
+
+{% block content %}
+  {% endblock content %}
+
+
+
+<footer class="main-footer">
+    <div class="footer">
+        <div class="rq-container"> 
+            <div class="item1">
+                <a href="/" class="font-36-pla-reg-2"><img src="{% static 'assets/dist/img/logo1.png' %}" alt="logo" /></a>
+                <p>Прямо сейчас в салоне Velvet Dresses в наличии более 300 платьев, каждое из которых находится в идеальном состоянии – чистое, поглаженное и без постороннего запаха. Волнуетесь о том, хорошо ли сядет наряд? Нет никаких причин для переживаний: мы подгоним понравившееся платье именно под вашу фигуру!</p>
+                <div class="get-touch">
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/velvetdresses1"><i class="fa fa-facebook" ></i></a></li>
+                        <li><a href="https://www.instagram.com/velvet_dresses/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.t.me/velvet_dresses/"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png' width='20' height='20'> </i></a></li>
+                        
+                    </ul>
+                </div><!-- /.get-touch -->
+            </div><!-- /.item1 -->
+              <div class="item4">
+               <h3 style="margin-left:130px;"></h3>
+             </div>
+           
+            <div class="item3">
+                <h3 class="font-18-pla-reg-2">GET HELP</h3>
+                <ul class="list-unstyled">
+                    <li><a href="/">ГЛАВНАЯ</a></l[.]i>
+                   <li><a href="{% url 'products:products' %}">КОЛЛЕКЦИЯ </a></li>
+                   <li><a href="{% url 'products:terms' %}"> УСЛОВИЯ</a></li>
+                    <li><a href="{% url 'products:about_us' %}">О НАС</a></li> 
+                    <li><a href="{% url 'products:contacts' %}">КОНТАКТЫ</a></li> 
+                    <li><a href="{% url 'products:faq' %}">ВОПРОСЫ-ОТВЕТЫ</a></li>
+                </ul>
+            </div><!-- /.item2 -->
+      
+             <div class="item4">
+               <h3 style="margin-left:130px;"></h3>
+             </div>
+           
+            
+            <div class="item5">
+                <h3 class="font-18-pla-reg-2">Контакты </h3>
+                <ul class="list-unstyled contact">
+                    <li class="map-marker"><p>Буюк Ипак Йули 103 дом 69 кв. <br> Ориентир: Мир Подарков </p>
+                        <p>Ташкент, Узбекистан</p></li>
+                    <li class="phone"><p>+998712684847</p></li>
+                    <li class="mobile"><p>+998994844670</p></li>
+                    <li class="envelope"><p>mailto@velvet-dresses.uz</p></li>
+                </ul>
+            </div><!-- /.item5 -->
+           
+        </div><!-- /.rq-container -->
+    </div><!-- /.footer --> 
+    <div class="bottom-bar">
+        <p>Copyright 2023 &copy; <a href="#">VELVET DRESSES</a></p>
+    </div><!-- /.bottom-bar -->
+</footer>
+
+
+
+
+
+  <script src="{% static 'assets/dist/js/vendor/jquery-3.2.0.min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/countUp.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/owl.carousel.min.js' %}"></script> 
+  <script src="{% static 'assets/dist/js/vendor/ion.rangeSlider.min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/dateRangePicker.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/jquery.flexslider-min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/jquery.nicescroll.min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/select2.min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/lightbox.min.js' %}"></script>
+  <script src="{% static 'assets/dist/js/vendor/jquery.smooth-scroll.js' %}"></script>
+  <script src="{% static 'assets/dist/js/custom.js' %}"></script>
+  <script src="{% static 'assets/dist/js/call.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,845 @@
+{% extends "base.html" %}
+{% load static %} 
+
+ {% block content %}
+<div class="filter-list base-padd">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="filters">
+					<div class="filter-header">
+						<span class="font-22-for-reg-2">Filters</span>
+						<a href="#" class="font-20-for-reg-0">Clear all</a>
+					</div><!-- /.filter-header -->
+					
+
+
+
+
+					<div class="category dropdown">
+						<header>
+							<span class="font-20-for-reg-0">Choose Category</span>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</header>
+						<div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="cat-one">
+	              <label for="cat-one">Dresses</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="cat-two">
+	              <label for="cat-two">Shoes</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="cat-three">
+	              <label for="cat-three">Accessories</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div>   
+            	
+					</div><!-- /.category -->
+
+
+					<div class="collection dropdown">
+						<header>
+							<span class="font-20-for-reg-0">Choose Collection</span>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</header>
+						<div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="coll-one">
+	              <label for="coll-one">Dresses</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="coll-two">
+	              <label for="coll-two">Shoes</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="coll-three">
+	              <label for="coll-three">Accessories</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="coll-four">
+	              <label for="coll-four">Accessories</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="coll-five">
+	              <label for="coll-five">Accessories</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div>   
+            	
+					</div><!-- /.collection -->
+
+					<div class="size dropdown">
+						<header>
+							<span class="font-20-for-reg-0">Select size</span>
+							<i class="fa fa-angle-down " aria-hidden="true"></i>
+						</header>
+						<div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="size-one">
+	              <label for="size-one">XX small</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="size-two">
+	              <label for="size-two">X small</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="size-three">
+	              <label for="size-three">Small</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="size-four">
+	              <label for="size-four">Medium</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="size-five">
+	              <label for="size-five">Large</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="size-six">
+	              <label for="size-six">X Large</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div>   
+            	
+					</div><!-- /.size -->
+
+
+					<div class="category dropdown">
+						<header>
+							<span class="font-20-for-reg-0">Choose Color</span>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</header>
+						<div class="color-chooser">
+							<span style="background: #D0021B" ></span>
+							<span style="background: #F5A623" ></span>
+							<span style="background: #F8E71C" ></span>
+							<span style="background: #F43030" ></span>
+							<span style="background: #D8D8D8" ></span>
+							<span style="background: #25479B" ></span>
+							<span style="background: #000000" ></span>
+							<span style="background: #7ED321" ></span>
+							<span style="background: #8B572A" ></span>
+							<span style="background: #5F9FE8" ></span>
+							<span style="background: #846E6E" ></span>
+							<span style="background: #F5AEAE" ></span>
+							<span style="background: #50E3C2" ></span>
+							<span style="background: #A3CEFF" ></span>
+							<span style="background: #EAD7C3" ></span>
+						</div><!-- /.color-chooser -->  
+            	
+					</div><!-- /.category -->
+
+
+
+
+
+					<div class="occasion dropdown">
+						<header>
+							<span class="font-20-for-reg-0">Choose Occasion</span>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</header>
+						<div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="occa-one">
+	              <label for="occa-one">Wedding party</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="occa-two">
+	              <label for="occa-two">Classic</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="occa-three">
+	              <label for="occa-three">Formal meeting</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="occa-four">
+	              <label for="occa-four">Black tie</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+		        <div>
+            	<span class="rq-checkbox">
+	              <input type="checkbox" id="occa-five">
+	              <label for="occa-five">Birthday look</label>
+		          </span><!-- /.rq-checkbox -->
+		        </div> 
+	
+					</div><!-- /.occasion -->
+
+					
+
+				</div><!-- /.filters -->	
+			</div><!-- /.col-sm-3 -->
+			<div class="col-sm-9">
+				<div class="product-display">
+					<h4 class="font-25-for-reg-0">Dresses <span>(432)</span></h4>	
+					<div class="view">
+						<div class="col-sm-5">
+							<span class="short">Short by : </span>
+							<select class="rq-rental-select2">
+								<option value="AL">Best match</option>
+								<option value="AL">Name</option>
+								<option value="WY">Save date</option>
+								<option value="WY">Green</option>
+							</select>	
+						</div><!-- /.col-sm-4 -->
+						<div class="col-sm-4">
+							<div class="text-center">
+								<nav aria-label="Page navigation">
+								  <ul class="pagination">
+								    <li>
+								      <a href="#" aria-label="Previous">
+								        <i class="fa fa-angle-left" aria-hidden="true"></i>
+								      </a>
+								    </li>
+								    <li><a class="active" href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">...</a></li>
+								    <li><a href="#">9</a></li>
+								    <li>
+								      <a href="#" class="active" aria-label="Next">
+								        <i class="fa fa-angle-right" aria-hidden="true"></i>
+								      </a>
+								    </li>
+								  </ul>
+								</nav>
+							</div><!-- text-center -->	
+						</div><!-- /.col-sm-4 -->
+						<div class="col-sm-3">
+							<div class="text-right filters">
+								<a href="listing-page-list.html"><i class="rq-257" aria-hidden="true"></i></a>
+								<a href="listing-page2.html"><i class="rq-639 active" aria-hidden="true"></i></a>
+								<a href="listing-page.html"><i class="rq-638" aria-hidden="true"></i></a>
+							</div>
+						</div><!-- /.col-sm-4 -->
+
+					</div><!-- /.view -->
+					<div class="row">
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="../assets/dist/img/products-list/grid-b1.jpg" data-lightbox="roadtrip"><img class="img-responsive" src="../assets/dist/img/products-list/gridb1.jpg" alt="grid1" /></a>
+									<figcaption>
+										<a href="#" class="left"><i class="fa fa-gift" aria-hidden="true"></i></a>
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										<div class="quick-view">
+											<a href="#" data-toggle="modal" data-target="#rqModalOne" data-whatever="@mdo">Quick View</a>
+											<div class="modal fade rq-modal" id="rqModalOne" tabindex="-1" role="dialog" >
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/dist/img/cross.png" alt=""></button>
+											      <div class="modal-body">
+
+															<div class="list-view">
+																<div class="row">
+																	<div class="col-sm-5"> 
+																		
+																		<div class="modal-carousel owl-carousel owl-theme">
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list3.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list2.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list1.jpg" alt="list"></figure>
+																	    </div>
+																    </div><!-- /.modal-carousel -->
+																	</div>
+																	<div class="col-sm-7">
+																		<div class="product-info">
+																			<h4 class="font-20-for-reg-0">Long Diva Dress</h4>
+																			<h4 class="font-16-for-reg-0">Brand : <span>Blue Flamingo</span></h4>
+																			<h5 class="font-16-for-reg-0">$50 <del>$99 rent</del> <b> 50% off /</b> <span>$999 renail</span></h5>
+																			<p class="font-16-for-reg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+																			<div class="delivery-date">
+																				<div id="houston-component-11"></div>
+																			</div><!-- /.delivery-date -->
+
+																			<div class="btn-group">
+																				
+																			<div class="size">
+																				<select class="rq-rental-select2">
+																					<option value="AL">Size</option>
+																					<option value="AL">38</option>
+																					<option value="WY">39</option>
+																					<option value="WY">40</option>
+																					<option value="WY">41</option>
+																					<option value="WY">42</option>
+																					<option value="WY">43</option>
+																				</select>
+																	
+																			</div><!-- /.size -->	
+																			<div class="color">
+																				
+																				<select class="rq-rental-select2">
+																					<option value="AL">Color</option>
+																					<option value="AL">Red</option>
+																					<option value="WY">Pink</option>
+																					<option value="WY">Green</option>
+																				</select>
+																			</div><!-- /.color -->	
+																			</div><!-- /.btn-group -->
+																			<button class="shopping-bag">Add to Shopping Bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+																			<div class="remove">
+																				<a href="#" class="left rq-custom"><i class="fa fa-gift active"></i> Remove Wishlist</a>
+																				<a href="#"><i class="fa fa-heart-o active"></i> Remove favorite</a>
+																			</div><!-- /.remove -->
+																		</div><!-- /.product-info -->
+																	</div>
+																</div><!-- /.row -->
+															</div><!-- /.list-view -->
+
+											      </div>
+											    </div><!-- /.modal-content -->
+											  </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+										</div>
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="booking.html" class="font-18-for-reg-0">Long Diva Dress</a>
+									<p>Blue Flamingo</p>
+									<h5>$99 rent / <span>$999 retail</span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="../assets/dist/img/products-list/grid-b2.jpg" data-lightbox="roadtrip"><img class="img-responsive" src="../assets/dist/img/products-list/gridb2.jpg" alt="grid1" /></a>
+									<figcaption>
+										<a href="#" class="left"><i class="fa fa-gift" aria-hidden="true"></i></a>
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										<div class="quick-view">
+											<a href="#" data-toggle="modal" data-target="#rqModal2" data-whatever="@mdo">Quick View</a>
+											<div class="modal fade rq-modal" id="rqModal2" tabindex="-1" role="dialog" >
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/dist/img/cross.png" alt=""></button>
+											      <div class="modal-body">
+
+															<div class="list-view">
+																<div class="row">
+																	<div class="col-sm-5"> 
+																		
+																		<div class="modal-carousel owl-carousel owl-theme">
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list3.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list2.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list1.jpg" alt="list"></figure>
+																	    </div>
+																    </div><!-- /.modal-carousel -->
+																	</div>
+																	<div class="col-sm-7">
+																		<div class="product-info">
+																			<h4 class="font-20-for-reg-0">Long Diva Dress</h4>
+																			<h4 class="font-16-for-reg-0">Brand : <span>Blue Flamingo</span></h4>
+																			<h5 class="font-16-for-reg-0">$50 <del>$99 rent</del> <b> 50% off /</b> <span>$999 renail</span></h5>
+																			<p class="font-16-for-reg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+																			<div class="delivery-date">
+																				<div id="houston-component-12"></div>
+																			</div><!-- /.delivery-date -->
+
+																			<div class="btn-group">
+																				
+																			<div class="size">
+																				<select class="rq-rental-select2">
+																					<option value="AL">Size</option>
+																					<option value="AL">38</option>
+																					<option value="WY">39</option>
+																					<option value="WY">40</option>
+																					<option value="WY">41</option>
+																					<option value="WY">42</option>
+																					<option value="WY">43</option>
+																				</select>
+																	
+																			</div><!-- /.size -->	
+																			<div class="color">
+																				
+																				<select class="rq-rental-select2">
+																					<option value="AL">Color</option>
+																					<option value="AL">Red</option>
+																					<option value="WY">Pink</option>
+																					<option value="WY">Green</option>
+																				</select>
+																			</div><!-- /.color -->	
+																			</div><!-- /.btn-group -->
+																			<button class="shopping-bag">Add to Shopping Bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+																			<div class="remove">
+																				<a href="#" class="left rq-custom"><i class="fa fa-gift active"></i> Remove Wishlist</a>
+																				<a href="#"><i class="fa fa-heart-o active"></i> Remove favorite</a>
+																			</div><!-- /.remove -->
+																		</div><!-- /.product-info -->
+																	</div>
+																</div><!-- /.row -->
+															</div><!-- /.list-view -->
+
+											      </div>
+											    </div><!-- /.modal-content -->
+											  </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+										</div>
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="booking.html" class="font-18-for-reg-0">Long Diva Dress</a>
+									<p>Blue Flamingo</p>
+									<h5>$99 rent / <span>$999 retail</span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="../assets/dist/img/products-list/grid-b4.jpg" data-lightbox="roadtrip"><img class="img-responsive" src="../assets/dist/img/products-list/gridb3.jpg" alt="grid1" /></a>
+									<figcaption>
+										<a href="#" class="left"><i class="fa fa-gift" aria-hidden="true"></i></a>
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										<div class="quick-view">
+											<a href="#" data-toggle="modal" data-target="#rqModal3" data-whatever="@mdo">Quick View</a>
+											<div class="modal fade rq-modal" id="rqModal3" tabindex="-1" role="dialog" >
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/dist/img/cross.png" alt=""></button>
+											      <div class="modal-body">
+
+															<div class="list-view">
+																<div class="row">
+																	<div class="col-sm-5"> 
+																		
+																		<div class="modal-carousel owl-carousel owl-theme">
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list3.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list2.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list1.jpg" alt="list"></figure>
+																	    </div>
+																    </div><!-- /.modal-carousel -->
+																	</div>
+																	<div class="col-sm-7">
+																		<div class="product-info">
+																			<h4 class="font-20-for-reg-0">Long Diva Dress</h4>
+																			<h4 class="font-16-for-reg-0">Brand : <span>Blue Flamingo</span></h4>
+																			<h5 class="font-16-for-reg-0">$50 <del>$99 rent</del> <b> 50% off /</b> <span>$999 renail</span></h5>
+																			<p class="font-16-for-reg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+																			<div class="delivery-date">
+																				<div id="houston-component-13"></div>
+																			</div><!-- /.delivery-date -->
+
+																			<div class="btn-group">
+																				
+																			<div class="size">
+																				<select class="rq-rental-select2">
+																					<option value="AL">Size</option>
+																					<option value="AL">38</option>
+																					<option value="WY">39</option>
+																					<option value="WY">40</option>
+																					<option value="WY">41</option>
+																					<option value="WY">42</option>
+																					<option value="WY">43</option>
+																				</select>
+																	
+																			</div><!-- /.size -->	
+																			<div class="color">
+																				
+																				<select class="rq-rental-select2">
+																					<option value="AL">Color</option>
+																					<option value="AL">Red</option>
+																					<option value="WY">Pink</option>
+																					<option value="WY">Green</option>
+																				</select>
+																			</div><!-- /.color -->	
+																			</div><!-- /.btn-group -->
+																			<button class="shopping-bag">Add to Shopping Bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+																			<div class="remove">
+																				<a href="#" class="left rq-custom"><i class="fa fa-gift active"></i> Remove Wishlist</a>
+																				<a href="#"><i class="fa fa-heart-o active"></i> Remove favorite</a>
+																			</div><!-- /.remove -->
+																		</div><!-- /.product-info -->
+																	</div>
+																</div><!-- /.row -->
+															</div><!-- /.list-view -->
+
+											      </div>
+											    </div><!-- /.modal-content -->
+											  </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+										</div>
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="booking.html" class="font-18-for-reg-0">Long Diva Dress</a>
+									<p>Blue Flamingo</p>
+									<h5>$99 rent / <span>$999 retail</span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="../assets/dist/img/products-list/grid-b6.jpg" data-lightbox="roadtrip"><img class="img-responsive" src="../assets/dist/img/products-list/gridb4.jpg" alt="grid1" /></a>
+									<figcaption>
+										<a href="#" class="left"><i class="fa fa-gift" aria-hidden="true"></i></a>
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										<div class="quick-view">
+											<a href="#" data-toggle="modal" data-target="#rqModal4" data-whatever="@mdo">Quick View</a>
+											<div class="modal fade rq-modal" id="rqModal4" tabindex="-1" role="dialog" >
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/dist/img/cross.png" alt=""></button>
+											      <div class="modal-body">
+
+															<div class="list-view">
+																<div class="row">
+																	<div class="col-sm-5"> 
+																		
+																		<div class="modal-carousel owl-carousel owl-theme">
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list3.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list2.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list1.jpg" alt="list"></figure>
+																	    </div>
+																    </div><!-- /.modal-carousel -->
+																	</div>
+																	<div class="col-sm-7">
+																		<div class="product-info">
+																			<h4 class="font-20-for-reg-0">Long Diva Dress</h4>
+																			<h4 class="font-16-for-reg-0">Brand : <span>Blue Flamingo</span></h4>
+																			<h5 class="font-16-for-reg-0">$50 <del>$99 rent</del> <b> 50% off /</b> <span>$999 renail</span></h5>
+																			<p class="font-16-for-reg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+																			<div class="delivery-date">
+																				<div id="houston-component-14"></div>
+																			</div><!-- /.delivery-date -->
+
+																			<div class="btn-group">
+																				
+																			<div class="size">
+																				<select class="rq-rental-select2">
+																					<option value="AL">Size</option>
+																					<option value="AL">38</option>
+																					<option value="WY">39</option>
+																					<option value="WY">40</option>
+																					<option value="WY">41</option>
+																					<option value="WY">42</option>
+																					<option value="WY">43</option>
+																				</select>
+																	
+																			</div><!-- /.size -->	
+																			<div class="color">
+																				
+																				<select class="rq-rental-select2">
+																					<option value="AL">Color</option>
+																					<option value="AL">Red</option>
+																					<option value="WY">Pink</option>
+																					<option value="WY">Green</option>
+																				</select>
+																			</div><!-- /.color -->	
+																			</div><!-- /.btn-group -->
+																			<button class="shopping-bag">Add to Shopping Bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+																			<div class="remove">
+																				<a href="#" class="left rq-custom"><i class="fa fa-gift active"></i> Remove Wishlist</a>
+																				<a href="#"><i class="fa fa-heart-o active"></i> Remove favorite</a>
+																			</div><!-- /.remove -->
+																		</div><!-- /.product-info -->
+																	</div>
+																</div><!-- /.row -->
+															</div><!-- /.list-view -->
+
+											      </div>
+											    </div><!-- /.modal-content -->
+											  </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+										</div>
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="booking.html" class="font-18-for-reg-0">Long Diva Dress</a>
+									<p>Blue Flamingo</p>
+									<h5>$99 rent / <span>$999 retail</span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="../assets/dist/img/products-list/grid-b7.jpg" data-lightbox="roadtrip"><img class="img-responsive" src="../assets/dist/img/products-list/gridb5.jpg" alt="grid1" /></a>
+									<figcaption>
+										<a href="#" class="left"><i class="fa fa-gift" aria-hidden="true"></i></a>
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										<div class="quick-view">
+											<a href="#" data-toggle="modal" data-target="#rqModal5" data-whatever="@mdo">Quick View</a>
+											<div class="modal fade rq-modal" id="rqModal5" tabindex="-1" role="dialog" >
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/dist/img/cross.png" alt=""></button>
+											      <div class="modal-body">
+
+															<div class="list-view">
+																<div class="row">
+																	<div class="col-sm-5"> 
+																		
+																		<div class="modal-carousel owl-carousel owl-theme">
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list3.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list2.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list1.jpg" alt="list"></figure>
+																	    </div>
+																    </div><!-- /.modal-carousel -->
+																	</div>
+																	<div class="col-sm-7">
+																		<div class="product-info">
+																			<h4 class="font-20-for-reg-0">Long Diva Dress</h4>
+																			<h4 class="font-16-for-reg-0">Brand : <span>Blue Flamingo</span></h4>
+																			<h5 class="font-16-for-reg-0">$50 <del>$99 rent</del> <b> 50% off /</b> <span>$999 renail</span></h5>
+																			<p class="font-16-for-reg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+																			<div class="delivery-date">
+																				<div id="houston-component-15"></div>
+																			</div><!-- /.delivery-date -->
+
+																			<div class="btn-group">
+																				
+																			<div class="size">
+																				<select class="rq-rental-select2">
+																					<option value="AL">Size</option>
+																					<option value="AL">38</option>
+																					<option value="WY">39</option>
+																					<option value="WY">40</option>
+																					<option value="WY">41</option>
+																					<option value="WY">42</option>
+																					<option value="WY">43</option>
+																				</select>
+																	
+																			</div><!-- /.size -->	
+																			<div class="color">
+																				
+																				<select class="rq-rental-select2">
+																					<option value="AL">Color</option>
+																					<option value="AL">Red</option>
+																					<option value="WY">Pink</option>
+																					<option value="WY">Green</option>
+																				</select>
+																			</div><!-- /.color -->	
+																			</div><!-- /.btn-group -->
+																			<button class="shopping-bag">Add to Shopping Bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+																			<div class="remove">
+																				<a href="#" class="left rq-custom"><i class="fa fa-gift active"></i> Remove Wishlist</a>
+																				<a href="#"><i class="fa fa-heart-o active"></i> Remove favorite</a>
+																			</div><!-- /.remove -->
+																		</div><!-- /.product-info -->
+																	</div>
+																</div><!-- /.row -->
+															</div><!-- /.list-view -->
+
+											      </div>
+											    </div><!-- /.modal-content -->
+											  </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+										</div>
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="booking.html" class="font-18-for-reg-0">Long Diva Dress</a>
+									<p>Blue Flamingo</p>
+									<h5>$99 rent / <span>$999 retail</span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="../assets/dist/img/products-list/grid-b8.jpg" data-lightbox="roadtrip"><img class="img-responsive" src="../assets/dist/img/products-list/gridb6.jpg" alt="grid1" /></a>
+									<figcaption>
+										<a href="#" class="left"><i class="fa fa-gift" aria-hidden="true"></i></a>
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										<div class="quick-view">
+											<a href="#" data-toggle="modal" data-target="#rqModal6" data-whatever="@mdo">Quick View</a>
+											<div class="modal fade rq-modal" id="rqModal6" tabindex="-1" role="dialog" >
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../assets/dist/img/cross.png" alt=""></button>
+											      <div class="modal-body">
+
+															<div class="list-view">
+																<div class="row">
+																	<div class="col-sm-5"> 
+																		
+																		<div class="modal-carousel owl-carousel owl-theme">
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list3.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list2.jpg" alt="list"></figure>
+																	    </div>
+																	    <div class="item">
+																	    	<figure><img class="img-responsive" src="../assets/dist/img/products-list/list1.jpg" alt="list"></figure>
+																	    </div>
+																    </div><!-- /.modal-carousel -->
+																	</div>
+																	<div class="col-sm-7">
+																		<div class="product-info">
+																			<h4 class="font-20-for-reg-0">Long Diva Dress</h4>
+																			<h4 class="font-16-for-reg-0">Brand : <span>Blue Flamingo</span></h4>
+																			<h5 class="font-16-for-reg-0">$50 <del>$99 rent</del> <b> 50% off /</b> <span>$999 renail</span></h5>
+																			<p class="font-16-for-reg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ipsum is simply dummy text of the printing and typesetting industry. </p>
+
+																			<div class="delivery-date">
+																				<div id="houston-component-16"></div>
+																			</div><!-- /.delivery-date -->
+
+																			<div class="btn-group">
+																				
+																			<div class="size">
+																				<select class="rq-rental-select2">
+																					<option value="AL">Size</option>
+																					<option value="AL">38</option>
+																					<option value="WY">39</option>
+																					<option value="WY">40</option>
+																					<option value="WY">41</option>
+																					<option value="WY">42</option>
+																					<option value="WY">43</option>
+																				</select>
+																	
+																			</div><!-- /.size -->	
+																			<div class="color">
+																				
+																				<select class="rq-rental-select2">
+																					<option value="AL">Color</option>
+																					<option value="AL">Red</option>
+																					<option value="WY">Pink</option>
+																					<option value="WY">Green</option>
+																				</select>
+																			</div><!-- /.color -->	
+																			</div><!-- /.btn-group -->
+																			<button class="shopping-bag">Add to Shopping Bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></button>
+																			<div class="remove">
+																				<a href="#" class="left rq-custom"><i class="fa fa-gift active"></i> Remove Wishlist</a>
+																				<a href="#"><i class="fa fa-heart-o active"></i> Remove favorite</a>
+																			</div><!-- /.remove -->
+																		</div><!-- /.product-info -->
+																	</div>
+																</div><!-- /.row -->
+															</div><!-- /.list-view -->
+
+											      </div>
+											    </div><!-- /.modal-content -->
+											  </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+										</div>
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="booking.html" class="font-18-for-reg-0">Long Diva Dress</a>
+									<p>Blue Flamingo</p>
+									<h5>$99 rent / <span>$999 retail</span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						
+
+
+					</div><!-- /.row -->
+				</div><!-- /.product-display -->
+				<div class="row mrg-top">
+					<div class="col-xs-4">
+						<a class="pages-on" href="#">1-9 of 432</a>
+					</div>
+					<div class="col-xs-8">
+						<nav aria-label="Page navigation">
+						  <ul class="pagination">
+						    <li>
+						      <a href="#" aria-label="Previous">
+						        <i class="fa fa-angle-left" aria-hidden="true"></i>
+						      </a>
+						    </li>
+						    <li><a class="active" href="#">1</a></li>
+						    <li><a href="#">2</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">...</a></li>
+						    <li><a href="#">9</a></li>
+						    <li>
+						      <a href="#" class="active" aria-label="Next">
+						        <i class="fa fa-angle-right" aria-hidden="true"></i>
+						      </a>
+						    </li>
+						  </ul>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.col-sm-9 -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.filter-list -->
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+<div id="go-to-top">
+	<a href="#stickynav"><i class="fa fa-angle-up"></i></a>
+</div> 
+
+  {% endblock %}

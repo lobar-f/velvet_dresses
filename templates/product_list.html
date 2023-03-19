@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %} 
+{% load widget_tweaks %} 
+
+ {% block content %}
+
+
+
+				
+					
+<div class="filter-list base-padd"> 
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="filters">
+					<div class="filter-header">
+						<span class="font-22-for-reg-2">ФИЛЬТРЫ</span>
+					</div><!-- /.filter-header -->
+					
+					
+
+	
+	
+
+					<div class="category dropdown">
+						
+					
+						
+							<form method="GET">
+            	{% for field in filter.form %}
+                        <div id="form-field-{{ forloop.counter0 }}">
+                            {{ field.label_tag }}
+                            {% render_field field class="form-control" %} <!-- widget_tweaks -->
+                        </div>
+                    {% endfor %}
+                <button class='btn btn-danger' type='submit'>поиск</button>
+                <button class='btn'><a href="{%  url 'products:products' %}" style="color:brown">Очистить </a></button>
+                 
+						</form>
+
+		      
+					{% if has_filter %}
+
+					{% endif %}
+		          
+            	
+					</div><!-- /.category -->
+
+
+
+
+
+
+
+				</div><!-- /.filters -->	
+			</div><!-- /.col-sm-3 -->
+
+			<div class="col-sm-9">
+				<div class="product-display">
+						
+					<div class="view">
+						<h4  style='padding: 6px; text-align: center;' class="font-25-for-reg-0"><span>Все платья: {{product_count}}</span></h4>
+						
+						
+
+					</div><!-- /.view -->
+					<div class="row">
+						{% for product in filter.qs %}
+						<div class="col-sm-6 col-def2">
+							<div class="product-list">
+								<figure>
+									<a href="{{ product.get_absolute_url }}"><img class="img-responsive" src="{{product.image_thumbnail.url}}" alt="grid1" /></a>
+									<figcaption>
+										
+										<a href="#" class="right"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+										
+									</figcaption>
+								</figure>
+								<div class="description">
+									<a href="{{ product.get_absolute_url }}" class="font-18-for-reg-0">{{product.name}}</a>
+									
+									<h5><span style="color: gray; font-size:12px; " >размер: {{product.size}} </span></h5>
+								</div><!-- /.description -->	
+							</div><!-- /.product-list -->
+						</div><!-- /.col-sm-4 -->
+						{%empty%}
+						<h2>Ничего не найдено</h2>
+						{% endfor %}
+						
+						
+
+
+					</div><!-- /.row -->
+				</div><!-- /.product-display -->
+				<div class="row mrg-top">
+					
+					<div class="col-xs-8">
+						<nav>
+						  
+						  	 {% block pagin %}
+						        	{% include "pagination.html" with page=page_obj %}
+								{% endblock %}
+					
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.col-sm-9 -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.filter-list -->
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+<div id="go-to-top">
+	<a href="#stickynav"><i class="fa fa-angle-up"></i></a>
+</div> 
+
+  {% endblock %}

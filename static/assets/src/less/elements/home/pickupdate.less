@@ -1,0 +1,79 @@
+@import "../common/common-style.less"; 
+.pickupdate {
+	padding: 40px 0;
+	background: @rq-flored-white-color;
+	.date-display {
+		display: flex;
+		width: 1100px; 
+		margin: 0 auto;
+		@media @res1199 {
+			width: 735px;
+		}
+		@media @res991, @res767, @res480 {
+			display: block;
+			width: 100%;
+		}
+		.form-date {
+			width: 460px; 
+			margin-right: 20px;
+			@media @res991, @res767, @res480 {
+				margin: 0 auto 10px;
+			}
+			@media @res767, @res480 {
+				width: 285px;
+			}
+			position: relative;
+			height: 45px;
+			@media @res1199 {
+				width: 285px;
+			}
+			i {
+				position: absolute;
+				z-index: 9;
+				font-size: 18px;
+				left: 20px;
+				top: 13px;
+			}
+			> input { 
+				height: 50px;
+				border-radius: 2px;
+				background: @rq-ash-color4;
+				font-family: 'Open-sans', sans-serif;
+		    font-size: 13px;
+		    font-weight: 600;
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		    outline: 0;
+			}
+			input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: @rq-primary-color;
+			}
+		}
+		.btn-search {
+			button {
+				width: 124px;
+				height: 50px;
+				background: @rq-primary-color;
+				border: none;
+				text-align: center;
+				color: @rq-white-color2;
+				font-family: 'Open-sans',sans-serif;
+				font-size: 13px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				border-radius: 2px;
+				@media @res991, @res767, @res480 {
+					margin: 0 auto;
+					display: block;
+					width: 460px; 
+				}
+				@media @res767, @res480 {
+					width: 285px;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+		}
+	}
+}
